@@ -40,7 +40,7 @@ function Payment() {
     console.log('👱', user)
 
     const handleSubmit = async (event) => {
-        // do all the fancy stripe stuff...
+        // do all the fancy stripe stuff... 
         event.preventDefault();
         setProcessing(true);
 
@@ -57,10 +57,11 @@ function Payment() {
               .collection('orders')
               .doc(paymentIntent.id)
               .set({
-                  basket: basket,
-                  amount: paymentIntent.amount,
-                  created: paymentIntent.created
+                basket: basket,
+                amount: paymentIntent.amount,
+                created: paymentIntent.created
               })
+
 
             setSucceeded(true);
             setError(null)
